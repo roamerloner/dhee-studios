@@ -76,7 +76,7 @@ function AboutUs() {
                       </p>
                     </div>
                     <div className="about-us-img-wrapper">
-                      <img src="images/house2.png" />
+                      <img src="images/house2.png" alt='' />
                     </div>
                   </div>
                 </section>

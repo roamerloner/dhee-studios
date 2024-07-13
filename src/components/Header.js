@@ -14,7 +14,7 @@ import React from 'react'
 
               <header className="header" id="home">
                   <div className="img-wrapper">
-                    <img src="images/pic1.jpg" />
+                    <img src="images/pic1.jpg" alt=''/>
                   </div>
                   <div className="banner">
                     <h1>dhee studios</h1>

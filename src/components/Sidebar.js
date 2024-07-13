@@ -24,7 +24,7 @@ function Sidebar() {
                     </li>
                   </ul>
                   <div className="social-media">
-                    <a href="https://www.facebook.com/profile.php?id=61562051698467" target="_blank"><i className="fab fa-facebook" /></a>
+                    <a href="https://www.facebook.com/profile.php?id=61562051698467" target="_blank"  rel="noreferrer"><i className="fab fa-facebook" /></a>
                     {/* <a
                   href="https://www.linkedin.com/in/karan-chandekar-a87263219/"
                   target="_blank"
