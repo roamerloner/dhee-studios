@@ -75,9 +75,9 @@ function AboutUs() {
                         voluptatibus, omnis eius vel ab magni nemo, incidunt esse! Quod!
                       </p>
                     </div>
-                    <div className="about-us-img-wrapper">
+                    {/* <div className="about-us-img-wrapper">
                       <img src="images/house2.png" alt='' />
-                    </div>
+                    </div> */}
                   </div>
                 </section>
     </div>
