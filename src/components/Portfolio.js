@@ -15,7 +15,7 @@ function Portfolio() {
         <div className="projects-grid">
           {[...Array(8)].map((_, index) => (
             <div key={index} className="project-item">
-              <img src={`/path/to/project-image-${index + 1}.jpg`} alt={`Project ${index + 1}`} />
+              <img src={`-${index + 1}.jpg`} alt={`Project ${index + 1}`} />
             </div>
           ))}
         </div>
@@ -25,6 +25,8 @@ function Portfolio() {
           <Link to="/portfolio?page=2">2</Link>
           <Link to="/portfolio?page=3">3</Link>
           <Link to="/portfolio?page=2">Next »</Link>
+
+          <Link to="/" className="back-to-home">Back to Home</Link>
         </div>
       </section>
     </div>

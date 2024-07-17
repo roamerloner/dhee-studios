@@ -19,7 +19,6 @@ import React from 'react'
                   <div className="banner">
                     <h1>dhee studios</h1>
                     <p>Concept🤝Creation</p>
-                    <button>Discover Now</button>
                   </div>
                 </header>
         </div>

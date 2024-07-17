@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import './styles/styles.css';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -8,9 +7,11 @@ import Team from './components/Team';
 import Contact from './components/Contact';
 import Spinner from './components/Spinner';
 import Sidebar from './components/Sidebar';
-import Portfolio from './components/Portfolio';
+import PortfolioLayout from './components/layouts/PortfolioLayout';
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   useEffect(() => {
     const handleLoad = () => {
       setTimeout(() => {
@@ -18,57 +19,45 @@ function App() {
       }, 4000);
     };
 
-    const handleHamburgerClick = () => {
-      document.querySelector(".container").classList.toggle("change");
-    };
-
-    const handleScrollBtnClick = () => {
-      document.querySelector("html").style.scrollBehavior = "smooth";
-      setTimeout(() => {
-        document.querySelector("html").style.scrollBehavior = "unset";
-      }, 1000);
-    };
-
     window.addEventListener('load', handleLoad);
-    document.querySelector(".hamburger-menu")?.addEventListener("click", handleHamburgerClick);
-    document.querySelector(".scroll-btn")?.addEventListener("click", handleScrollBtnClick);
 
     return () => {
       window.removeEventListener('load', handleLoad);
-      document.querySelector(".hamburger-menu")?.removeEventListener("click", handleHamburgerClick);
-      document.querySelector(".scroll-btn")?.removeEventListener("click", handleScrollBtnClick);
     };
   }, []);
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+    document.querySelector(".container").classList.toggle("change");
+  };
+
   return (
     <Router>
-      <div className="App">
-        <Spinner />
-        <div className="container">
-          <div className="hamburger-menu">
-            <div className="line line-1"></div>
-            <div className="line line-2"></div>
-            <div className="line line-3"></div>
-            <span>Close</span>
+      <Routes>
+        <Route path="/portfolio" element={<PortfolioLayout />} />
+        <Route path="/" element={
+          <div className="App">
+            <Spinner />
+            <div className={`container ${menuOpen ? 'change' : ''}`}>
+              <div className="hamburger-menu" onClick={toggleMenu}>
+                <div className="line line-1"></div>
+                <div className="line line-2"></div>
+                <div className="line line-3"></div>
+                <span>Close</span>
+              </div>
+              <Header />
+              <Sidebar />
+              <AboutUs />
+              <Team />
+              <Contact />
+              <Footer />
+              <Link to="/portfolio" className="scroll-btn" target="_blank" rel="noopener noreferrer">
+                <i className="fas fa-arrow-up"></i>
+              </Link>
+            </div>
           </div>
-          <Header />
-          <Sidebar />
-          <Routes>
-            <Route path="/" element={
-              <>
-                <AboutUs />
-                <Team />
-                <Contact />
-              </>
-            } />
-            <Route path="/portfolio" element={<Portfolio />} />
-          </Routes>
-          <Footer />
-          <Link to="/portfolio" className="scroll-btn">
-            <i className="fas fa-arrow-up"></i>
-          </Link>
-        </div>
-      </div>
+        } />
+      </Routes>
     </Router>
   );
 }

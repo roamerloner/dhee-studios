@@ -20,7 +20,7 @@ function Team() {
                 
                   <section className="team" id="team">
                     <div className="section-header">
-                      <h1 className="section-heading">Our Team</h1>
+                      <h1 className="section-heading-team">Our Team</h1>
                       <div className="underline" />
                     </div>
                     <div className="cards-wrapper">

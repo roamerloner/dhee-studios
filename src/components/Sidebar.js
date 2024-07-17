@@ -8,22 +8,22 @@ function Sidebar() {
           <section className="sidebar">
                   <ul className="menu">
                     <li className="menu-item">
-                      <a href="#home" className="menu-link" data-content="Home">Home</a>
+                      <Link to="#home" className="menu-link" data-content="Home">Home</Link>
                     </li>
                     <li className="menu-item">
-                      <a href="#about-us" className="menu-link" data-content="About Us">About Us</a>
+                      <Link to="#about-us" className="menu-link" data-content="About Us">About Us</Link>
                     </li>
                     <li className="menu-item">
-                      <a href="#team" className="menu-link" data-content="Team">Team</a>
+                      <Link to="#team" className="menu-link" data-content="Team">Team</Link>
                     </li>
                     <li class="menu-item">
-                  <Link href="/portfolio" className="menu-link" data-content="Portfolio">Portfolio</Link>
+                  <a href="/portfolio" className="menu-link" data-content="Portfolio" target="_blank">Portfolio</a>
                      </li>
                     <li className="menu-item">
-                      <a href="#services" className="menu-link" data-content="Services">Services</a>
+                      <Link to="#services" className="menu-link" data-content="Services">Services</Link>
                     </li>
                     <li className="menu-item">
-                      <a href="#contact" className="menu-link" data-content="Contact">Contact</a>
+                      <Link to="#contact" className="menu-link" data-content="Contact">Contact</Link>
                     </li>
                   </ul>
                   <div className="social-media">
