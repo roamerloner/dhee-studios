@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+
 
 function Sidebar() {
   return (
@@ -14,11 +16,12 @@ function Sidebar() {
                     <li className="menu-item">
                       <a href="#team" className="menu-link" data-content="Team">Team</a>
                     </li>
-                    {/* <li class="menu-item">
-                  <a href="#pricing" class="menu-link" data-content="Pricing"
-                    >Pricing</a
-                  >
-                </li> */}
+                    <li class="menu-item">
+                  <Link href="/portfolio" className="menu-link" data-content="Portfolio">Portfolio</Link>
+                     </li>
+                    <li className="menu-item">
+                      <a href="#services" className="menu-link" data-content="Services">Services</a>
+                    </li>
                     <li className="menu-item">
                       <a href="#contact" className="menu-link" data-content="Contact">Contact</a>
                     </li>

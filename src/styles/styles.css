@@ -789,6 +789,73 @@ html {
     border-radius: 0.3rem;
 }
 
+/* Project Page CSS starts */
+
+/* Header Section */
+
+.project-header {
+    background: url('/public/images/house1.png') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+
+.project-header-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.project-header-content p {
+    font-size: 24px;
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Pagination Section */
+.pagination {
+    margin: 20px 0;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    margin: 0 5px;
+}
+
+.pagination a:hover,
+.pagination a.active {
+    background: #f4a424;
+    color: white;
+}
+
+/* Project Page CSS ends */
+
+.auto-container{
+	position:static;
+	max-width:1200px;
+	padding:0px 15px;
+	margin:0 auto;
+}
+
 @media (max-width: 1500px) {
     .about-us-img-wrapper {
         grid-row: 3 / -1;
