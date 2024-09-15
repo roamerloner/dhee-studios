@@ -14,7 +14,7 @@ function Sidebar() {
                       <Link to="#about-us" className="menu-link" data-content="About Us">About Us</Link>
                     </li>
                     <li className="menu-item">
-                      <Link to="#team" className="menu-link" data-content="Team">Team</Link>
+                      <a href="#team" className="menu-link" data-content="Team">Team</a>
                     </li>
                     <li class="menu-item">
                   <a href="/portfolio" className="menu-link" data-content="Portfolio" target="_blank">Portfolio</a>

@@ -550,6 +550,7 @@ html {
     justify-content: space-evenly;
     margin-top: 8rem;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -558,6 +559,7 @@ html {
     box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
     border-radius: 0.5rem;
     position: relative;
+    margin-bottom: 4rem;
 }
 
 .card-img-wrapper {
@@ -1069,3 +1071,60 @@ html {
         height: 18rem;
     }
 }
+
+
+/* team section */
+.team .cards-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 4rem; /* This adds space between the cards */
+    transition: opacity 0.3s ease-in-out;
+    padding: 0 2rem; /* This adds some padding on the sides of the wrapper */
+  }
+  
+  
+  .team .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .team .pagination button {
+    background-color: #f0f0f0;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    font-size: 1.6rem;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .team .pagination button.active {
+    background-color: #c29525;
+    color: #fff;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .team .card {
+    flex: 0 0 calc(33.333% - 8rem); /* This ensures the cards take up equal width with space */
+    max-width: 37rem; /* You can adjust this value based on your preference */
+    margin-bottom: 4rem; /* This adds space below each card */
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  @media (max-width: 1200px) {
+    .team .card {
+      flex: 0 0 calc(50% - 4rem);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .team .card {
+      flex: 0 0 100%;
+    }
+  }
